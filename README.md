@@ -1,2 +1,2 @@
 # syedrafiqmsc.github.io
-BSE Class XI and XII Informatics Practices/CS Practical Portal
+CBSE Class XI and XII Informatics Practices/CS Practical Portal
