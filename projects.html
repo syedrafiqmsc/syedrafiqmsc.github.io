@@ -2,81 +2,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class XII IP Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IP Projects | Syed Rafiq</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+    text-align: center;
+    padding: 48px 20px;
+}
+
+header h1 {
+    font-size: clamp(26px, 4vw, 40px);
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.stats span {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 32px 20px 50px;
+}
+
+.section {
+    margin-bottom: 42px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.section-title .line {
+    flex: 1;
+    height: 2px;
+    background: #cbd5e1;
+}
+
+.section-title small {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.commerce .section-title { color: #1d4ed8; }
+.biology .section-title { color: #15803d; }
+.general .section-title { color: #7c3aed; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #64748b;
+    box-shadow: 0 4px 12px rgba(15,23,42,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(15,23,42,0.10);
+}
+
+.commerce .card { border-top-color: #2563eb; }
+.biology .card { border-top-color: #16a34a; }
+.general .card { border-top-color: #7c3aed; }
+
+.card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-weight: 700;
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.commerce .number {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.biology .number {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.card h3 {
+    font-size: 17px;
+    line-height: 1.45;
+    color: #0f172a;
+    margin: 4px 0 10px;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 24px 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 35px 16px;
+    }
+
+    .container {
+        padding: 25px 14px 35px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>CBSE Class XII Informatics Practices (065) Projects</h1>
+<header>
+    <h1>CBSE Class XII IP Projects</h1>
+    <p>Informatics Practices (065) | Academic Session 2026–27</p>
+    <div class="stats">
+        <span>20 Projects</span>
+        <span>Commerce · Biology · General / Science</span>
+    </div>
+</header>
 
-    <h2>Commerce Stream Projects</h2>
+<main class="container">
 
-    <h3>1. UPI and Digital Payment Analysis System</h3>
-    <p>Analyze digital payment transactions, payment methods, transaction amounts, and monthly trends.</p>
+<!-- COMMERCE PROJECTS -->
+<section class="section commerce">
+    <h2 class="section-title">
+        Commerce Stream <small>05 Projects</small>
+        <span class="line"></span>
+    </h2>
 
-    <h3>2. Hotel Management System</h3>
-    <p>Manage hotel room bookings, customer details, check-in, check-out, and billing records.</p>
+    <div class="grid">
 
-    <h3>3. Employee Payroll Management System</h3>
-    <p>Calculate employee salaries, allowances, deductions, and net pay.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">01</span>
+                <h3>UPI and Digital Payment Analysis System</h3>
+            </div>
+            <p>Analyze digital payment methods, transaction amounts, payment frequency, and monthly trends.</p>
+        </article>
 
-    <h3>4. E-Commerce Order Management and Sales Analysis System</h3>
-    <p>Manage customer orders, product details, sales, payment methods, and revenue reports.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">02</span>
+                <h3>Hotel Management System</h3>
+            </div>
+            <p>Manage room bookings, customer details, check-in and check-out records, and hotel billing.</p>
+        </article>
 
-    <h3>5. Bank Management System</h3>
-    <p>Maintain customer accounts, deposits, withdrawals, account balances, and transaction records.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">03</span>
+                <h3>Employee Payroll Management System</h3>
+            </div>
+            <p>Calculate employee salaries, allowances, deductions, and net pay.</p>
+        </article>
 
+        <article class="card">
+            <div class="card-top">
+                <span class="number">04</span>
+                <h3>E-Commerce Order Management and Sales Analysis System</h3>
+            </div>
+            <p>Manage product orders, customer purchases, payment methods, sales, and revenue reports.</p>
+        </article>
 
-    <h2>Biology Stream Projects</h2>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">05</span>
+                <h3>Bank Management System</h3>
+            </div>
+            <p>Maintain customer accounts, deposits, withdrawals, account balances, and transaction records.</p>
+        </article>
 
-    <h3>6. Blood Bank Management System</h3>
-    <p>Maintain blood donor details, blood groups, blood stock, and blood donation records.</p>
+    </div>
+</section>
 
-    <h3>7. Hospital Management System</h3>
-    <p>Manage patient registrations, doctor details, appointments, departments, and hospital records.</p>
+<!-- BIOLOGY PROJECTS -->
+<section class="section biology">
+    <h2 class="section-title">
+        Biology Stream <small>03 Projects</small>
+        <span class="line"></span>
+    </h2>
 
-    <h3>8. COVID-19 Data Analysis System</h3>
-    <p>Analyze COVID-19 cases, recoveries, deaths, and trends using tables and graphs.</p>
+    <div class="grid">
 
+        <article class="card">
+            <div class="card-top">
+                <span class="number">06</span>
+                <h3>Blood Bank Management System</h3>
+            </div>
+            <p>Maintain donor details, blood groups, available blood stock, and donation records.</p>
+        </article>
 
-    <h2>General / Science Stream Projects</h2>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">07</span>
+                <h3>Hospital Management System</h3>
+            </div>
+            <p>Manage patient registration, doctor details, appointments, and hospital records.</p>
+        </article>
 
-    <h3>9. Student Management System</h3>
-    <p>Manage student records using Python and MySQL.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">08</span>
+                <h3>COVID-19 Data Analysis System</h3>
+            </div>
+            <p>Analyze COVID-19 cases, recoveries, deaths, and trends using tables and graphs.</p>
+        </article>
 
-    <h3>10. Library Management System</h3>
-    <p>Maintain book details, student records, book issue dates, return dates, and availability.</p>
+    </div>
+</section>
 
-    <h3>11. E-Waste Management and Analysis System</h3>
-    <p>Record electronic waste collection, categories, disposal methods, and recycling statistics.</p>
+<!-- GENERAL / SCIENCE PROJECTS -->
+<section class="section general">
+    <h2 class="section-title">
+        General / Science <small>12 Projects</small>
+        <span class="line"></span>
+    </h2>
 
-    <h3>12. Online Food Ordering and Delivery Analysis System</h3>
-    <p>Manage food orders, menu items, customer details, delivery status, and sales analysis.</p>
+    <div class="grid">
 
-    <h3>13. Cybercrime Awareness and Analysis System</h3>
-    <p>Study cybercrime categories, reported incidents, online safety awareness, and prevention methods.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">09</span>
+                <h3>Student Management System</h3>
+            </div>
+            <p>Manage student records, admission details, class information, and academic marks using Python and MySQL.</p>
+        </article>
 
-    <h3>14. Railway Reservation Management System</h3>
-    <p>Manage passenger details, train information, ticket bookings, seat availability, and cancellations.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">10</span>
+                <h3>Library Management System</h3>
+            </div>
+            <p>Maintain book details, issue and return dates, student records, and book availability.</p>
+        </article>
 
-    <h3>15. AI Chatbot Usage and Student Learning Analysis</h3>
-    <p>Analyze student use of AI chatbots, learning preferences, usage frequency, and perceived benefits.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">11</span>
+                <h3>E-Waste Management and Analysis System</h3>
+            </div>
+            <p>Record electronic waste collection, waste categories, disposal methods, and recycling statistics.</p>
+        </article>
 
-    <h3>16. Social Media Usage and Digital Addiction Analysis</h3>
-    <p>Analyze social media usage time, popular platforms, usage patterns, and digital wellbeing.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">12</span>
+                <h3>Online Food Ordering and Delivery Analysis System</h3>
+            </div>
+            <p>Manage food orders, menu items, delivery status, customer details, and sales trends.</p>
+        </article>
 
-    <h3>17. IPL and T20 Cricket Data Analysis System</h3>
-    <p>Analyze team performance, player statistics, runs, wickets, and match results using graphs.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">13</span>
+                <h3>Cybercrime Awareness and Analysis System</h3>
+            </div>
+            <p>Study cybercrime categories, reported incidents, online safety awareness, and prevention methods.</p>
+        </article>
 
-    <h3>18. APSRTC Bus Reservation and Management System</h3>
-    <p>Manage bus routes, passenger details, ticket bookings, seat availability, and travel schedules.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">14</span>
+                <h3>Railway Reservation Management System</h3>
+            </div>
+            <p>Manage passenger details, train schedules, ticket bookings, seat availability, and cancellations.</p>
+        </article>
 
-    <h3>19. Sports Management System</h3>
-    <p>Maintain player records, sports events, team details, match schedules, and results.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">15</span>
+                <h3>AI Chatbot Usage and Student Learning Analysis</h3>
+            </div>
+            <p>Analyze chatbot usage frequency, student learning preferences, and perceived learning benefits.</p>
+        </article>
 
-    <h3>20. Computer Game Development System</h3>
-    <p>Develop a simple computer game using Python with player controls, scoring, and game rules.</p>
+        <article class="card">
+            <div class="card-top">
+                <span class="number">16</span>
+                <h3>Social Media Usage and Digital Addiction Analysis</h3>
+            </div>
+            <p>Analyze daily screen time, popular platforms, usage patterns, and digital wellbeing.</p>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="number">17</span>
+                <h3>IPL and T20 Cricket Data Analysis System</h3>
+            </div>
+            <p>Analyze team performance, player statistics, runs, wickets, and match results using graphs.</p>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="number">18</span>
+                <h3>APSRTC Bus Reservation and Management System</h3>
+            </div>
+            <p>Manage bus routes, passenger details, ticket bookings, seat availability, and travel schedules.</p>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="number">19</span>
+                <h3>Sports Management System</h3>
+            </div>
+            <p>Maintain player records, team details, sports events, match schedules, and results.</p>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="number">20</span>
+                <h3>Computer Game Development System</h3>
+            </div>
+            <p>Develop a simple Python game with player controls, scoring, and game rules.</p>
+        </article>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>CBSE Class XII Informatics Practices (065)</p>
+    <p>Project Collection | Academic Session 2026–27</p>
+</footer>
 
 </body>
 </html>
