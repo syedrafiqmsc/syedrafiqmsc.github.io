@@ -56,39 +56,284 @@ footer {
 </nav>
 
 <main>
-    <h2>Pandas, DataFrames, SQL and Matplotlib</h2>
+    
+<main>
+    <h2>CBSE Class XII Informatics Practices (065) Viva</h2>
+    <p>100 Viva Questions with Answers | Academic Session 2026–27</p>
 
-    <article>
-        <h3>Q1. What is Pandas?</h3>
-        <p><strong>Answer:</strong> Pandas is a Python library used for data manipulation and analysis.</p>
+    <div style="background:white;padding:16px;border-radius:12px;margin-bottom:16px;">
+        <input id="vivaSearch" type="search" placeholder="Search questions or answers..." style="width:100%;padding:10px;margin-bottom:10px;box-sizing:border-box;">
+
+        <select id="vivaCategory" style="width:100%;padding:10px;margin-bottom:10px;">
+            <option value="All">All Topics</option>
+            <option value="Python and Pandas">Python and Pandas</option>
+            <option value="DataFrame Operations">DataFrame Operations</option>
+            <option value="Matplotlib">Matplotlib</option>
+            <option value="SQL">SQL</option>
+            <option value="SQL Functions and Connectivity">SQL Functions and Connectivity</option>
+            <option value="Computer Networks">Computer Networks</option>
+            <option value="Societal Impacts">Societal Impacts</option>
+        </select>
+
+        <p id="vivaCount" aria-live="polite"></p>
+    </div>
+
+    <article id="vivaCard" style="background:white;padding:20px;border-radius:12px;min-height:180px;">
+        <p>Loading questions...</p>
     </article>
 
-    <article>
-        <h3>Q2. What is a DataFrame?</h3>
-        <p><strong>Answer:</strong> A two-dimensional labelled data structure with rows and columns.</p>
-    </article>
-
-    <article>
-        <h3>Q3. What is the difference between loc and iloc?</h3>
-        <p><strong>Answer:</strong> loc selects by labels; iloc selects by integer positions.</p>
-    </article>
-
-    <article>
-        <h3>Q4. What does df.shape return?</h3>
-        <p><strong>Answer:</strong> A tuple containing the number of rows and columns.</p>
-    </article>
-
-    <article>
-        <h3>Q5. What is the purpose of GROUP BY?</h3>
-        <p><strong>Answer:</strong> It groups rows with matching values so aggregate functions can be applied to each group.</p>
-    </article>
-
-    <article>
-        <h3>Q6. What is a histogram?</h3>
-        <p><strong>Answer:</strong> A chart that displays the frequency distribution of numerical data using bins.</p>
-    </article>
+    <div style="text-align:center;margin:16px 0;">
+        <button id="vivaPrev" type="button">← Previous</button>
+        <button id="vivaAnswer" type="button">Show Answer</button>
+        <button id="vivaNext" type="button">Next →</button>
+        <button id="vivaRandom" type="button">Random Question</button>
+    </div>
 
     <p><a href="index.html">← Return to Home</a></p>
+</main>
+
+<script>
+(function () {
+    const groups = [
+        ["Python and Pandas", [
+            ["What is Python?", "Python is a high-level, interpreted, general-purpose programming language."],
+            ["What is Pandas?", "Pandas is a Python library used for data manipulation and analysis."],
+            ["How do you import Pandas?", "import pandas as pd"],
+            ["What is an alias?", "An alternative name given to a module. Here, pd is the alias for Pandas."],
+            ["What are the two main Pandas data structures?", "Series and DataFrame."],
+            ["What is a Series?", "A one-dimensional labelled array."],
+            ["What is a DataFrame?", "A two-dimensional labelled data structure with rows and columns."],
+            ["Differentiate between Series and DataFrame.", "A Series is one-dimensional; a DataFrame is two-dimensional."],
+            ["How do you create a Series?", "pd.Series([10, 20, 30])"],
+            ["How do you create a DataFrame from a dictionary?", "pd.DataFrame({'Name': ['Ali', 'Ravi'], 'Marks': [90, 85]})"],
+            ["What is an index in Pandas?", "Labels used to identify rows or elements."],
+            ["What is the default index in Pandas?", "Integer labels starting from 0, unless specified otherwise."],
+            ["What does head() do?", "Displays the first five rows by default."],
+            ["What does tail() do?", "Displays the last five rows by default."],
+            ["What does shape return?", "A tuple containing the number of rows and columns in a DataFrame."],
+            ["What does size return?", "The total number of elements in a Pandas object."],
+            ["What does ndim return?", "The number of dimensions of an object."],
+            ["Differentiate between an attribute and a method.", "An attribute provides information; a method performs an operation."],
+            ["Is shape() correct?", "No. shape is an attribute and is used without parentheses."],
+            ["What does dtypes display?", "The data type of each DataFrame column."],
+            ["What does describe() do?", "It generates descriptive statistics for applicable columns."],
+            ["What does info() display?", "Column names, data types, non-null counts and memory information."],
+            ["What is slicing?", "Selecting a portion of a data structure."],
+            ["What is Boolean indexing?", "Selecting data using conditions that evaluate to True or False."],
+            ["What is a missing value in Pandas?", "A missing entry, often represented by NaN or None."]
+        ]],
+        ["DataFrame Operations", [
+            ["How do you display one column?", "df['Marks']"],
+            ["How do you display multiple columns?", "df[['Name', 'Marks']]"],
+            ["What is loc[]?", "An accessor that selects data by labels."],
+            ["What is iloc[]?", "An accessor that selects data by integer positions."],
+            ["Differentiate between loc[] and iloc[].", "loc uses labels; iloc uses integer positions."],
+            ["How do you select the first row using iloc?", "df.iloc[0]"],
+            ["How do you select the first three rows?", "df.iloc[0:3]"],
+            ["How do you select rows where marks are greater than 80?", "df[df['Marks'] > 80]"],
+            ["How do you add a new column?", "df['Grade'] = ['A', 'B']; the number of values must match the number of rows."],
+            ["How do you delete a column?", "df.drop(columns=['Grade'], inplace=True)"],
+            ["What does inplace=True mean?", "It applies the operation directly to the existing object when supported."],
+            ["How do you rename a column?", "df.rename(columns={'Marks': 'Score'}, inplace=True)"],
+            ["What does sort_values() do?", "Sorts rows according to specified column values."],
+            ["What does isnull() do?", "It identifies missing values."],
+            ["Differentiate between dropna() and fillna().", "dropna() removes missing data; fillna() replaces missing values."]
+        ]],
+        ["Matplotlib", [
+            ["What is Matplotlib?", "A Python library used to create charts and graphs."],
+            ["How do you import Pyplot?", "import matplotlib.pyplot as plt"],
+            ["What is data visualization?", "Representing data graphically to reveal patterns and comparisons."],
+            ["Name three common plot types in Class XII IP.", "Line chart, bar chart and histogram."],
+            ["Which plot shows trends over time?", "A line chart."],
+            ["Which plot compares categories?", "A bar chart."],
+            ["Which plot shows a numerical frequency distribution?", "A histogram."],
+            ["What does plt.plot() do?", "Creates a line plot by default."],
+            ["What does plt.bar() do?", "Creates a bar chart."],
+            ["What does plt.hist() do?", "Creates a histogram."],
+            ["What does plt.xlabel() do?", "Sets the x-axis label."],
+            ["What does plt.ylabel() do?", "Sets the y-axis label."],
+            ["What does plt.title() do?", "Sets the chart title."],
+            ["What does plt.legend() do?", "Displays a legend for labelled data series."],
+            ["What does plt.show() do?", "Displays the figure."]
+        ]],
+        ["SQL", [
+            ["What is SQL?", "Structured Query Language, used to manage and query relational databases."],
+            ["What is a DBMS?", "Software used to create, store, retrieve and manage databases."],
+            ["What is a relational database?", "A database that organizes related data into tables."],
+            ["What is a table?", "Related data organized into rows and columns."],
+            ["What is a primary key?", "A column or combination of columns that uniquely identifies each row and cannot contain NULL."],
+            ["What is a foreign key?", "A column or combination of columns that references a key in another or the same table."],
+            ["Differentiate between DDL and DML.", "DDL defines database structures; DML manipulates data."],
+            ["Give examples of DDL commands.", "CREATE, ALTER, DROP and TRUNCATE."],
+            ["Give examples of DML commands.", "INSERT, UPDATE and DELETE."],
+            ["What is DQL?", "Data Query Language; SELECT is commonly classified under DQL."],
+            ["What is SELECT used for?", "Retrieving data from a table or query result."],
+            ["What is WHERE used for?", "Filtering rows according to a condition."],
+            ["What is ORDER BY used for?", "Sorting query results using ASC or DESC."],
+            ["What is GROUP BY used for?", "Grouping rows with matching values, often for aggregate calculations."],
+            ["What is HAVING used for?", "Filtering groups, usually after GROUP BY."],
+            ["Differentiate between WHERE and HAVING.", "WHERE filters rows before grouping; HAVING filters groups."],
+            ["What are aggregate functions?", "Functions such as SUM(), AVG(), MIN(), MAX() and COUNT()."],
+            ["Differentiate between COUNT(*) and COUNT(column).", "COUNT(*) counts rows; COUNT(column) counts non-NULL values in that column."],
+            ["Differentiate between DELETE and DROP.", "DELETE removes rows; DROP removes a database object."],
+            ["What is a JOIN?", "It combines related rows from two or more tables using a specified condition."]
+        ]],
+        ["SQL Functions and Connectivity", [
+            ["Differentiate between CHAR and VARCHAR.", "CHAR is fixed-length; VARCHAR is variable-length."],
+            ["Differentiate between DECIMAL and FLOAT.", "DECIMAL stores exact decimal values within its precision; FLOAT stores approximate values."],
+            ["What does UPPER() do?", "Converts a string to uppercase."],
+            ["What does LOWER() do?", "Converts a string to lowercase."],
+            ["What does LENGTH() do in MySQL?", "Returns the length of a string in bytes."],
+            ["What does ROUND() do?", "Rounds a numeric value to a specified number of decimal places."],
+            ["What does MOD() do?", "Returns the remainder after division."],
+            ["What is DISTINCT used for?", "Eliminates duplicate rows from the selected result."],
+            ["What is NULL in SQL?", "A missing or unknown value, different from zero or an empty string."],
+            ["What is mysql.connector?", "A Python module used to connect Python programs to MySQL and execute SQL statements."]
+        ]],
+        ["Computer Networks", [
+            ["What is a computer network?", "Interconnected devices that communicate and share resources."],
+            ["What is a LAN?", "Local Area Network, covering a limited geographical area."],
+            ["What is a WAN?", "Wide Area Network, spanning a large geographical area."],
+            ["What is the Internet?", "A global network of interconnected networks using standard protocols."],
+            ["What is an IP address?", "A network-layer address used to identify an interface on an IP network."],
+            ["What is a MAC address?", "A link-layer address associated with a network interface."],
+            ["Differentiate between HTTP and HTTPS.", "HTTPS uses TLS to protect HTTP communication."],
+            ["What is network topology?", "The physical or logical arrangement of network devices and connections."]
+        ]],
+        ["Societal Impacts", [
+            ["What is a digital footprint?", "The trail of data a person leaves while using digital services."],
+            ["What is phishing?", "An attack that impersonates a trusted entity to steal information or obtain unauthorized access."],
+            ["What is plagiarism?", "Using another person's work or ideas without proper acknowledgment."],
+            ["What are Intellectual Property Rights (IPR)?", "Legal rights protecting creations such as inventions, literary works and software."],
+            ["What is Artificial Intelligence (AI)?", "Computing systems designed to perform tasks associated with human intelligence."],
+            ["Differentiate between AI and Machine Learning.", "AI is the broader field; Machine Learning is a subset that learns patterns from data."],
+            ["What is cloud computing?", "The delivery of computing resources and services over a network, usually the Internet."]
+        ]]
+    ];
+
+    const questions = groups.flatMap(function (group) {
+        return group[1].map(function (item) {
+            return { category: group[0], q: item[0], a: item[1] };
+        });
+    });
+
+    let filtered = questions;
+    let current = 0;
+    let revealed = false;
+
+    const card = document.getElementById("vivaCard");
+    const search = document.getElementById("vivaSearch");
+    const category = document.getElementById("vivaCategory");
+    const count = document.getElementById("vivaCount");
+    const prev = document.getElementById("vivaPrev");
+    const next = document.getElementById("vivaNext");
+    const answerButton = document.getElementById("vivaAnswer");
+
+    function render() {
+        card.innerHTML = "";
+
+        if (filtered.length === 0) {
+            const message = document.createElement("h3");
+            message.textContent = "No matching questions found.";
+            card.appendChild(message);
+            count.textContent = "0 questions found.";
+            prev.disabled = true;
+            next.disabled = true;
+            answerButton.disabled = true;
+            return;
+        }
+
+        current = Math.max(0, Math.min(current, filtered.length - 1));
+        const item = filtered[current];
+
+        const number = document.createElement("p");
+        number.textContent = "Question " + (current + 1) + " of " + filtered.length;
+        number.style.color = "#526174";
+
+        const topic = document.createElement("p");
+        topic.textContent = item.category;
+        topic.style.color = "#245b91";
+
+        const question = document.createElement("h3");
+        question.textContent = item.q;
+
+        card.append(number, topic, question);
+
+        if (revealed) {
+            const answer = document.createElement("p");
+            answer.style.background = "#edf7ed";
+            answer.style.padding = "12px";
+            answer.style.borderRadius = "8px";
+
+            const label = document.createElement("strong");
+            label.textContent = "Answer: ";
+
+            answer.append(label, document.createTextNode(item.a));
+            card.appendChild(answer);
+        }
+
+        count.textContent = filtered.length + " questions available";
+        prev.disabled = current === 0;
+        next.disabled = current === filtered.length - 1;
+        answerButton.disabled = false;
+        answerButton.textContent = revealed ? "Hide Answer" : "Show Answer";
+    }
+
+    function applyFilters() {
+        const term = search.value.toLowerCase().trim();
+
+        filtered = questions.filter(function (item) {
+            const matchesCategory =
+                category.value === "All" || item.category === category.value;
+
+            const matchesText =
+                item.q.toLowerCase().includes(term) ||
+                item.a.toLowerCase().includes(term);
+
+            return matchesCategory && matchesText;
+        });
+
+        current = 0;
+        revealed = false;
+        render();
+    }
+
+    search.addEventListener("input", applyFilters);
+    category.addEventListener("change", applyFilters);
+
+    prev.addEventListener("click", function () {
+        if (current > 0) {
+            current--;
+            revealed = false;
+            render();
+        }
+    });
+
+    next.addEventListener("click", function () {
+        if (current < filtered.length - 1) {
+            current++;
+            revealed = false;
+            render();
+        }
+    });
+
+    answerButton.addEventListener("click", function () {
+        revealed = !revealed;
+        render();
+    });
+
+    document.getElementById("vivaRandom").addEventListener("click", function () {
+        if (filtered.length > 0) {
+            current = Math.floor(Math.random() * filtered.length);
+            revealed = false;
+            render();
+        }
+    });
+
+    render();
+})();
+</script>
+
 </main>
 
 <footer>
