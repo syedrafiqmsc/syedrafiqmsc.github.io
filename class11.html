@@ -1,44 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Class XI Informatics Practices | Syed Rafiq</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f3f6fb;
-      color: #202938;
-      line-height: 1.6;
-    }
-    header {
-      background: #17365d;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-    main {
-      max-width: 850px;
-      margin: 25px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-    }
-    a { color: #245b91; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CBSE Class XI Informatics Practices study notes, MCQs, practical programs and chapter-wise PDFs by Syed Rafiq.">
+<title>Class XI IP 065 Study Materials | Syed Rafiq</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#202938;line-height:1.6}
+header{background:#17365d;color:white;text-align:center;padding:30px 16px}
+header h1{margin:0 0 8px;font-size:clamp(24px,4vw,36px)}
+header p{margin:5px}
+nav{background:#102744;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:6px 12px;display:inline-block}
+main{max-width:1100px;margin:24px auto;padding:0 16px}
+.intro,.chapter,.resource-section{background:white;border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 3px 12px #0000000c}
+h2,h3{color:#245b91}
+.search-row{display:grid;grid-template-columns:2fr 1fr;gap:10px}
+input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:8px;font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.chapter{margin:0;display:flex;flex-direction:column}
+.chapter h3{margin-top:0}
+.tag{display:inline-block;background:#e8f0fc;color:#17365d;padding:4px 9px;border-radius:20px;font-size:12px;margin-bottom:8px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:12px}
+.links a,.resource-section a{display:inline-block;text-decoration:none;background:#17365d;color:white;padding:9px 12px;border-radius:7px;font-size:14px}
+.links a.secondary{background:#e8f0fc;color:#17365d}
+.resource-section a{margin:4px}
+.notice{background:#fff7df;border-left:4px solid #d9a520;padding:12px;border-radius:6px}
+footer{margin-top:35px;background:#102744;color:white;text-align:center;padding:20px}
+footer a{color:white}
+.hidden{display:none}
+@media(max-width:600px){.search-row{grid-template-columns:1fr}main{padding:0 12px}.intro,.chapter,.resource-section{padding:16px}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>CBSE Class XI Informatics Practices</h1>
-    <p>Academic Session 2026–27</p>
-    <p>Prepared by Syed Rafiq</p>
-  </header>
-  <main>
-    <h2>Class XI Learning Resources</h2>
-    <p>Welcome to the Class XI Informatics Practices resource page.</p>
-    <p>Study notes, practical programs and learning materials will be added here.</p>
-    <p><a href="index.html">← Return to Home</a></p>
-  </main>
+<header>
+<h1>CBSE Class XI Informatics Practices (065)</h1>
+<p>Chapter-wise Study Materials, Notes and Practical Resources</p>
+<p>Academic Session 2026–27</p>
+<p>Prepared by Syed Rafiq</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="viva.html">Viva Questions</a>
+<a href="#chapters">Study Chapters</a>
+<a href="#practicals">Practical Resources</a>
+</nav>
+
+<main>
+<section class="intro">
+<h2>Class XI IP Learning Portal</h2>
+<p>Use this page to access chapter-wise notes, revision questions, MCQs, practical programs and downloadable study materials.</p>
+<div class="notice">
+<strong>Syllabus note:</strong> Confirm chapter names and coverage against the official CBSE Class XI Informatics Practices (065) syllabus for 2026–27 before using these resources as a complete syllabus checklist.
+</div>
+<br>
+<div class="search-row">
+<input id="search" type="search" placeholder="Search chapters or topics..." aria-label="Search chapters">
+<select id="filter" aria-label="Filter study material">
+<option value="all">All resources</option>
+<option value="notes">Notes</option>
+<option value="questions">Important questions</option>
+<option value="mcq">MCQs</option>
+<option value="practical">Practical programs</option>
+</select>
+</div>
+<p id="resultCount" aria-live="polite"></p>
+</section>
+
+<section id="chapters">
+<h2>Chapter-wise Study Materials</h2>
+<div class="grid" id="chapterGrid">
+
+<article class="chapter" data-search="computer system hardware software memory operating system notes questions mcq">
+<span class="tag">Chapter 1 · Computer Fundamentals</span>
+<h3>Computer System</h3>
+<p>Study computer fundamentals, hardware, software, memory, input/output devices and operating-system basics where prescribed.</p>
+<div class="links">
+<a href="#notes-computer">Read Notes</a>
+<a class="secondary" href="#questions-computer">Important Questions</a>
+<a class="secondary" href="#mcq-computer">MCQs</a>
+</div>
+</article>
+
+<article class="chapter" data-search="python programming variables data types operators input output conditionals loops notes questions mcq practical">
+<span class="tag">Chapter 2 · Programming</span>
+<h3>Introduction to Python</h3>
+<p>Revise Python syntax, variables, data types, operators, expressions, input/output and control statements according to the syllabus.</p>
+<div class="links">
+<a href="#notes-python">Read Notes</a>
+<a class="secondary" href="#questions-python">Important Questions</a>
+<a class="secondary" href="#mcq-python">MCQs</a>
+<a class="secondary" href="#practicals">Programs</a>
+</div>
+</article>
+
+<article class="chapter" data-search="database DBMS table records fields keys SQL select where order by notes questions mcq practical">
+<span class="tag">Chapter 3 · Database</span>
+<h3>Database Concepts and SQL</h3>
+<p>Revise database terminology, tables, records, fields, keys and introductory SQL concepts relevant to your prescribed syllabus.</p>
+<div class="links">
+<a href="#notes-sql">Read Notes</a>
+<a class="secondary" href="#questions-sql">Important Questions</a>
+<a class="secondary" href="#mcq-sql">MCQs</a>
+</div>
+</article>
+
+<article class="chapter" data-search="emerging trends AI artificial intelligence machine learning IoT cloud computing robotics blockchain notes questions mcq">
+<span class="tag">Chapter 4 · Technology</span>
+<h3>Emerging Trends</h3>
+<p>Explore AI, machine learning, IoT, robotics, cloud computing, blockchain and related concepts where included in the prescribed syllabus.</p>
+<div class="links">
+<a href="#notes-emerging">Read Notes</a>
+<a class="secondary" href="#questions-emerging">Important Questions</a>
+<a class="secondary" href="#mcq-emerging">MCQs</a>
+</div>
+</article>
+
+</div>
+<p id="noResults" class="hidden">No matching chapters found. Try another search.</p>
+</section>
+
+<section id="notes" class="resource-section">
+<h2>Chapter Notes and Downloads</h2>
+<p>Open a chapter to review the topics to prepare. Add your PDF links here when the files are uploaded.</p>
+
+<div id="notes-computer">
+<h3>1. Computer System</h3>
+<p>Suggested topics: computer components, hardware and software, memory, storage, input/output devices and operating systems.</p>
+<p><strong>PDF:</strong> Not uploaded yet.</p>
+</div>
+<hr>
+
+<div id="notes-python">
+<h3>2. Introduction to Python</h3>
+<p>Suggested topics: Python fundamentals, variables, data types, operators, expressions, input/output and control flow, according to the prescribed syllabus.</p>
+<p><strong>PDF:</strong> Not uploaded yet.</p>
+</div>
+<hr>
+
+<div id="notes-sql">
+<h3>3. Database Concepts and SQL</h3>
+<p>Suggested topics: database terminology, tables, records, fields, keys and SQL commands applicable to the prescribed syllabus.</p>
+<p><strong>PDF:</strong> Not uploaded yet.</p>
+</div>
+<hr>
+
+<div id="notes-emerging">
+<h3>4. Emerging Trends</h3>
+<p>Suggested topics: artificial intelligence, machine learning, IoT, robotics, cloud computing and blockchain, where prescribed.</p>
+<p><strong>PDF:</strong> Not uploaded yet.</p>
+</div>
+</section>
+
+<section id="questions" class="resource-section">
+<h2>Important Questions</h2>
+
+<div id="questions-computer">
+<h3>Computer System</h3>
+<ul>
+<li>Differentiate between hardware and software.</li>
+<li>What is the purpose of primary memory?</li>
+<li>Differentiate between RAM and ROM.</li>
+</ul>
+</div>
+
+<div id="questions-python">
+<h3>Introduction to Python</h3>
+<ul>
+<li>What is Python? State two features.</li>
+<li>Differentiate between a variable and a constant.</li>
+<li>What are data types and operators?</li>
+<li>Explain conditional statements and loops with examples.</li>
+</ul>
+</div>
+
+<div id="questions-sql">
+<h3>Database Concepts and SQL</h3>
+<ul>
+<li>What is a DBMS?</li>
+<li>Differentiate between a field and a record.</li>
+<li>What is a primary key?</li>
+<li>What is the purpose of the SELECT statement?</li>
+</ul>
+</div>
+
+<div id="questions-emerging">
+<h3>Emerging Trends</h3>
+<ul>
+<li>What is Artificial Intelligence?</li>
+<li>Differentiate between AI and Machine Learning.</li>
+<li>What is the Internet of Things?</li>
+<li>What is cloud computing?</li>
+</ul>
+</div>
+</section>
+
+<section id="mcqs" class="resource-section">
+<h2>MCQ Practice</h2>
+
+<div id="mcq-computer">
+<h3>Computer System</h3>
+<p><strong>1.</strong> Which component executes program instructions?</p>
+<p>A. CPU &nbsp; B. Monitor &nbsp; C. Keyboard &nbsp; D. Printer</p>
+<details><summary>Show answer</summary><p>Answer: A. CPU</p></details>
+</div>
+
+<div id="mcq-python">
+<h3>Introduction to Python</h3>
+<p><strong>2.</strong> Which symbol is used for a single-line comment in Python?</p>
+<p>A. // &nbsp; B. # &nbsp; C. <!-- --> &nbsp; D. **</p>
+<details><summary>Show answer</summary><p>Answer: B. #</p></details>
+</div>
+
+<div id="mcq-sql">
+<h3>Database Concepts and SQL</h3>
+<p><strong>3.</strong> Which SQL command retrieves data from a table?</p>
+<p>A. UPDATE &nbsp; B. SELECT &nbsp; C. DROP &nbsp; D. ALTER</p>
+<details><summary>Show answer</summary><p>Answer: B. SELECT</p></details>
+</div>
+
+<div id="mcq-emerging">
+<h3>Emerging Trends</h3>
+<p><strong>4.</strong> Which technology connects physical devices over a network?</p>
+<p>A. IoT &nbsp; B. Word processing &nbsp; C. Printing &nbsp; D. Formatting</p>
+<details><summary>Show answer</summary><p>Answer: A. Internet of Things (IoT)</p></details>
+</div>
+</section>
+
+<section id="practicals" class="resource-section">
+<h2>Practical Programs and Resources</h2>
+<p>Use this section for your Python programs, output screenshots, worksheets and practical PDFs.</p>
+<ul>
+<li>Python program collection — upload your file before adding a download link.</li>
+<li>Chapter-wise practical worksheets — PDF links can be added here.</li>
+<li>Practice exercises and sample questions — add files as they become available.</li>
+</ul>
+<p><strong>Practical PDF:</strong> Not uploaded yet.</p>
+</section>
+
+<section class="resource-section">
+<h2>Useful Links</h2>
+<p><a href="index.html">Return to Home</a></p>
+<p><a href="viva.html">Open Viva Questions</a></p>
+<p><a href="https://cbseacademic.nic.in/" target="_blank" rel="noopener noreferrer">CBSE Academic Website</a></p>
+</section>
+</main>
+
+<footer>
+<p>CBSE Informatics Practices (065) | Prepared by Syed Rafiq</p>
+<p><a href="index.html">Home</a> | <a href="viva.html">Viva Questions</a></p>
+</footer>
+
+<script>
+(function(){
+const search=document.getElementById("search");
+const filter=document.getElementById("filter");
+const cards=Array.from(document.querySelectorAll(".chapter"));
+const count=document.getElementById("resultCount");
+const noResults=document.getElementById("noResults");
+
+function update(){
+const term=search.value.toLowerCase().trim();
+let visible=0;
+cards.forEach(function(card){
+const text=(card.innerText+" "+card.dataset.search).toLowerCase();
+const matchesText=text.includes(term);
+const value=filter.value;
+const matchesType=value==="all" ||
+(value==="notes" && card.querySelector('a[href^="#notes-"]')) ||
+(value==="questions" && card.querySelector('a[href^="#questions-"]')) ||
+(value==="mcq" && card.querySelector('a[href^="#mcq-"]')) ||
+(value==="practical" && card.querySelector('a[href="#practicals"]'));
+card.classList.toggle("hidden",!(matchesText && matchesType));
+if(matchesText && matchesType) visible++;
+});
+count.textContent=visible+" chapter(s) found";
+noResults.classList.toggle("hidden",visible!==0);
+}
+search.addEventListener("input",update);
+filter.addEventListener("change",update);
+update();
+})();
+</script>
 </body>
 </html>
