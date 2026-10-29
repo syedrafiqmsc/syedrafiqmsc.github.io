@@ -1,127 +1,121 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CBSE Class 12 Informatics Practices (065) Practical Programs | Syed Rafiq</title>
-<meta name="description" content="CBSE Class 12 Informatics Practices (065) practical resources by Syed Rafiq, including Python Pandas programs, SQL queries, Matplotlib exercises, project reports and viva questions.">
-    <style>
-* { box-sizing: border-box; }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f3f6fb;
-    color: #202938;
-    line-height: 1.6;
-}
-header {
-    background: #17365d;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-}
-nav {
-    background: #102744;
-    padding: 13px;
-    text-align: center;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 8px 12px;
-}
-main {
-    max-width: 1050px;
-    margin: auto;
-    padding: 22px;
-}
-section {
-    background: white;
-    padding: 22px;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px #0001;
-    scroll-margin-top: 12px;
-}
-h2 { color: #17365d; }
-h3 { color: #245b91; }
-pre {
-    background: #172334;
-    color: #e5f1ff;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-    white-space: pre;
-}
-code { font-family: Consolas, monospace; }
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 12px 0;
-}
-th, td {
-    border: 1px solid #d4dce7;
-    padding: 9px;
-    text-align: left;
-}
-th { background: #e6eef8; }
-.note {
-    background: #edf5ff;
-    padding: 12px;
-    border-left: 4px solid #245b91;
-}
-a { color: #1456a0; }
-footer {
-    background: #102744;
-    color: white;
-    text-align: center;
-    padding: 18px;
-}
-@media (max-width: 600px) {
-    main { padding: 12px; }
-    section { padding: 15px; }
-    nav a { display: inline-block; }
-}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CBSE Class XII Informatics Practices (065) Explorer with Pandas, Matplotlib, SQL, Computer Networks, Societal Impacts and practical resources by Syed Rafiq.">
+<title>Class XII IP 065 Explorer | Syed Rafiq</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#202938;line-height:1.6}
+header{background:#17365d;color:#fff;text-align:center;padding:30px 16px}
+header h1{margin:0 0 8px;font-size:clamp(24px,4vw,36px)}
+header p{margin:5px}
+nav{background:#102744;padding:12px;text-align:center}
+nav a{color:#fff;text-decoration:none;margin:6px 12px;display:inline-block}
+main{max-width:1100px;margin:24px auto;padding:0 16px}
+.intro,.chapter,.resource-section{background:#fff;border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 3px 12px #0000000c}
+h2,h3{color:#245b91}
+.search-row{display:grid;grid-template-columns:2fr 1fr;gap:10px}
+input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:8px;font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.chapter{margin:0;display:flex;flex-direction:column}
+.chapter h3{margin-top:0}
+.tag{display:inline-block;background:#e8f0fc;color:#17365d;padding:4px 9px;border-radius:20px;font-size:12px;margin-bottom:8px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:12px}
+.links a,.resource-section a{display:inline-block;text-decoration:none;background:#17365d;color:#fff;padding:9px 12px;border-radius:7px;font-size:14px}
+.links a.secondary{background:#e8f0fc;color:#17365d}
+.resource-section a{margin:4px}
+.note{background:#edf5ff;padding:12px;border-left:4px solid #245b91;border-radius:6px}
+.notice{background:#fff7df;border-left:4px solid #d9a520;padding:12px;border-radius:6px}
+pre{background:#172334;color:#e5f1ff;padding:15px;border-radius:8px;overflow-x:auto;white-space:pre}
+code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;margin:12px 0;overflow-wrap:anywhere}
+th,td{border:1px solid #d4dce7;padding:9px;text-align:left}
+th{background:#e6eef8}
+footer{margin-top:35px;background:#102744;color:#fff;text-align:center;padding:20px}
+footer a{color:#fff}
+.hidden{display:none}
+hr{border:0;border-top:1px solid #d4dce7;margin:22px 0}
+@media(max-width:600px){.search-row{grid-template-columns:1fr}main{padding:0 12px}.intro,.chapter,.resource-section{padding:16px}table{font-size:13px}th,td{padding:6px}}
 </style>
 </head>
 <body>
-
 <header>
-    <h1>Class XII IP Practical Laboratory</h1>
-    <p>CBSE Informatics Practices (065)</p>
-    <p>Python | Pandas | Matplotlib | MySQL</p>
-    <p>Prepared by Syed Rafiq</p>
+<h1>CBSE Class XII Informatics Practices (065)</h1>
+<p>Chapter-wise Study Materials, Notes and Practical Resources</p>
+<p>Academic Session 2026–27</p>
+<p>Prepared by Syed Rafiq, PGT Computer Science</p>
 </header>
-
 <nav>
-    <a href="index.html">Home</a>
-    <a href="#pandas">Pandas</a>
-    <a href="#charts">Charts</a>
-    <a href="#sql">SQL</a>
-    <a href="#viva">Viva</a>
+<a href="index.html">Home</a>
+<a href="#chapters">Study Chapters</a>
+<a href="#practicals">Practical Resources</a>
+<a href="#viva">Viva and Revision</a>
 </nav>
-
 <main>
-
-<section>
-    <h2>Welcome, Class XII Students!</h2>
-    <p>This page provides sample programs, outputs, SQL
-    queries and revision questions for practical preparation.</p>
-    <div class="note">
-        Run Python programs in your Python environment and
-        SQL queries in MySQL. The examples below are study
-        resources; they do not execute code on this website.
-    </div>
+<section class="intro">
+<h2>Class XII IP Learning Portal</h2>
+<p>Use this Explorer to find chapter-wise topics, practical examples, revision questions and downloadable study materials.</p>
+<div class="notice"><strong>Note:</strong> Confirm topic coverage against the official CBSE Class XII Informatics Practices (065) syllabus for 2026–27. PDF links will be activated when the corresponding PDF files are uploaded to the repository.</div>
+<div class="search-row">
+<input id="search" type="search" placeholder="Search chapters or topics..." aria-label="Search chapters">
+<select id="filter" aria-label="Filter study material">
+<option value="all">All resources</option><option value="notes">Notes</option><option value="questions">Important questions</option><option value="mcq">MCQs</option><option value="practical">Practical programs</option>
+</select>
+</div>
+<p id="resultCount" aria-live="polite"></p>
 </section>
-
-<section id="pandas">
-    <h2>1. Pandas DataFrame Practicals</h2>
-    <p>A DataFrame is a two-dimensional labelled data
-    structure consisting of rows and columns.</p>
-
-    <h3>Program 1: Create a DataFrame</h3>
-    <pre><code>import pandas as pd
+<section id="chapters">
+<h2>Chapter-wise Study Materials</h2>
+<div class="grid" id="chapterGrid">
+<article class="chapter" data-search="pandas series dataframe data analysis indexing slicing boolean indexing notes questions mcq practical">
+<span class="tag">Unit 1 · Data Handling</span><h3>Pandas and DataFrame</h3>
+<p>Series, DataFrame creation, attributes, selection, indexing, slicing, Boolean indexing and DataFrame operations.</p>
+<div class="links"><a href="#notes-pandas">Read Notes</a><a class="secondary" href="#questions-pandas">Important Questions</a><a class="secondary" href="#mcq-pandas">MCQs</a><a class="secondary" href="#practicals">Programs</a></div>
+</article>
+<article class="chapter" data-search="matplotlib data visualization line chart bar chart histogram bins labels title legend notes questions mcq practical">
+<span class="tag">Unit 2 · Visualization</span><h3>Data Visualization</h3>
+<p>Matplotlib line charts, bar charts, histograms, labels, titles, legends, ticks and grids.</p>
+<div class="links"><a href="#notes-charts">Read Notes</a><a class="secondary" href="#questions-charts">Important Questions</a><a class="secondary" href="#mcq-charts">MCQs</a><a class="secondary" href="#practicals">Programs</a></div>
+</article>
+<article class="chapter" data-search="mysql sql select where order by group by having aggregate string numeric functions database notes questions mcq practical">
+<span class="tag">Unit 3 · Database</span><h3>Database Query Using SQL</h3>
+<p>SQL queries, conditions, sorting, aggregate functions, grouping, filtering groups and built-in functions.</p>
+<div class="links"><a href="#notes-sql">Read Notes</a><a class="secondary" href="#questions-sql">Important Questions</a><a class="secondary" href="#mcq-sql">MCQs</a><a class="secondary" href="#practicals">Queries</a></div>
+</article>
+<article class="chapter" data-search="computer networks lan wan topology transmission media protocol internet devices notes questions mcq">
+<span class="tag">Unit 4 · Networking</span><h3>Computer Networks</h3>
+<p>Network types, topologies, transmission media, devices, protocols and Internet-related concepts.</p>
+<div class="links"><a href="#notes-networks">Read Notes</a><a class="secondary" href="#questions-networks">Important Questions</a><a class="secondary" href="#mcq-networks">MCQs</a></div>
+</article>
+<article class="chapter" data-search="societal impacts digital footprint cyber safety privacy intellectual property copyright license plagiarism e waste notes questions mcq">
+<span class="tag">Unit 5 · Digital Society</span><h3>Societal Impacts</h3>
+<p>Digital footprints, cyber safety, privacy, intellectual property, licensing, plagiarism and e-waste.</p>
+<div class="links"><a href="#notes-societal">Read Notes</a><a class="secondary" href="#questions-societal">Important Questions</a><a class="secondary" href="#mcq-societal">MCQs</a></div>
+</article>
+</div>
+<p id="noResults" class="hidden">No matching chapters found. Try another search.</p>
+</section>
+<section id="notes" class="resource-section">
+<h2>Chapter Notes and PDF Downloads</h2>
+<p>Upload each PDF to the repository root folder, then replace the placeholder below with links using the exact uploaded filename.</p>
+<div id="notes-pandas"><h3>1. Pandas and DataFrame</h3><p>Topics: Series, DataFrame creation, attributes and methods, row/column selection, loc and iloc, slicing, Boolean indexing and iteration.</p><p><strong>PDF:</strong> Not uploaded yet.</p></div>
+<hr>
+<div id="notes-charts"><h3>2. Data Visualization with Matplotlib</h3><p>Topics: line charts, bar charts, histograms, bins, labels, titles, legends, ticks, grids and saving figures.</p><p><strong>PDF:</strong> Not uploaded yet.</p></div>
+<hr>
+<div id="notes-sql"><h3>3. Database Query Using SQL</h3><p>Topics: SELECT, WHERE, ORDER BY, aggregate functions, GROUP BY, HAVING and commonly used SQL functions.</p><p><strong>SQL PDF:</strong> Not uploaded yet.</p></div>
+<hr>
+<div id="notes-networks"><h3>4. Computer Networks</h3><p>Topics: network types, topologies, communication media, networking devices, protocols and Internet services.</p><p><strong>PDF:</strong> Not uploaded yet.</p></div>
+<hr>
+<div id="notes-societal"><h3>5. Societal Impacts</h3><p>Topics: digital footprints, cyber safety, privacy, IPR, copyright, software licences, plagiarism and e-waste.</p><p><strong>PDF:</strong> Not uploaded yet.</p></div>
+</section>
+<section id="practicals" class="resource-section">
+<h2>Practical Programs and Resources</h2>
+<p>The examples below preserve the Pandas, Matplotlib and MySQL practical material from your existing Class XII page.</p>
+<div id="practical-pandas">
+<h3>Program 1: Create a DataFrame</h3>
+<pre><code>import pandas as pd
 
 data = {
     'Arnab': [90, 91, 97],
@@ -131,99 +125,60 @@ data = {
     'Mallika': [94, 95, 99]
 }
 
-df = pd.DataFrame(
-    data,
-    index=['Maths', 'Science', 'Hindi']
-)
-
+df = pd.DataFrame(data, index=['Maths', 'Science', 'Hindi'])
 print(df)</code></pre>
-
-    <h3>Expected Output</h3>
-    <table>
-        <tr>
-            <th>Subject</th><th>Arnab</th>
-            <th>Ramit</th><th>Samridhi</th>
-            <th>Riya</th><th>Mallika</th>
-        </tr>
-        <tr><td>Maths</td><td>90</td><td>92</td><td>89</td><td>81</td><td>94</td></tr>
-        <tr><td>Science</td><td>91</td><td>81</td><td>91</td><td>71</td><td>95</td></tr>
-        <tr><td>Hindi</td><td>97</td><td>96</td><td>88</td><td>67</td><td>99</td></tr>
-    </table>
-
-    <h3>Program 2: Display rows and columns</h3>
-    <pre><code>print(df.head(2))
+<h3>Expected Output</h3>
+<table><tr><th>Subject</th><th>Arnab</th><th>Ramit</th><th>Samridhi</th><th>Riya</th><th>Mallika</th></tr><tr><td>Maths</td><td>90</td><td>92</td><td>89</td><td>81</td><td>94</td></tr><tr><td>Science</td><td>91</td><td>81</td><td>91</td><td>71</td><td>95</td></tr><tr><td>Hindi</td><td>97</td><td>96</td><td>88</td><td>67</td><td>99</td></tr></table>
+<h3>Program 2: DataFrame attributes and selection</h3>
+<pre><code>print(df.head(2))
 print(df.tail(2))
 print(df.shape)
 print(df.columns)
 print(df.index)
-print(df.dtypes)</code></pre>
-
-    <h3>Program 3: Select rows using loc and iloc</h3>
-    <pre><code>print(df.loc['Maths'])
+print(df.dtypes)
+print(df.loc['Maths'])
 print(df.loc['Science', 'Arnab'])
 print(df.iloc[0])
 print(df.iloc[1, 2])</code></pre>
-
-    <h3>Program 4: Boolean Indexing</h3>
-    <pre><code>print(df[df['Arnab'] > 90])
-print(df.loc[:, df.loc['Maths'] > 90])</code></pre>
-
-    <h3>Program 5: Add a new column</h3>
-    <pre><code>df['Average'] = df.mean(axis=1)
+<h3>Program 3: Boolean indexing and new column</h3>
+<pre><code>print(df[df['Arnab'] > 90])
+print(df.loc[:, df.loc['Maths'] > 90])
+df['Average'] = df.mean(axis=1)
 print(df)</code></pre>
-
-    <h3>Program 6: Iterate through DataFrame rows</h3>
-    <pre><code>for subject, row in df.iterrows():
+<h3>Program 4: Iterate through DataFrame rows</h3>
+<pre><code>for subject, row in df.iterrows():
     print(subject, row['Arnab'])</code></pre>
-</section>
-
-<section id="charts">
-    <h2>2. Data Visualization with Matplotlib</h2>
-
-    <h3>Program 7: Line Chart</h3>
-    <pre><code>import matplotlib.pyplot as plt
-
+</div>
+<hr>
+<div id="practical-charts"><h3>Program 5: Line Chart</h3>
+<pre><code>import matplotlib.pyplot as plt
 subjects = ['Maths', 'Science', 'Hindi']
 marks = [90, 91, 97]
-
-plt.plot(subjects, marks, marker='o',
-         label='Arnab')
+plt.plot(subjects, marks, marker='o', label='Arnab')
 plt.xlabel('Subjects')
 plt.ylabel('Marks')
 plt.title('Marks in Different Subjects')
 plt.legend()
 plt.grid(True)
 plt.show()</code></pre>
-
-    <h3>Program 8: Bar Chart</h3>
-    <pre><code>plt.bar(subjects, marks, label='Arnab')
+<h3>Program 6: Bar Chart</h3>
+<pre><code>plt.bar(subjects, marks, label='Arnab')
 plt.xlabel('Subjects')
 plt.ylabel('Marks')
 plt.title('Subject-wise Marks')
 plt.legend()
 plt.show()</code></pre>
-
-    <h3>Program 9: Histogram</h3>
-    <pre><code>all_marks = [90, 92, 89, 81, 94,
-             91, 81, 91, 71, 95,
-             97, 96, 88, 67, 99]
-
-plt.hist(all_marks, bins=5,
-         edgecolor='black')
+<h3>Program 7: Histogram</h3>
+<pre><code>all_marks = [90, 92, 89, 81, 94, 91, 81, 91, 71, 95, 97, 96, 88, 67, 99]
+plt.hist(all_marks, bins=5, edgecolor='black')
 plt.xlabel('Marks')
 plt.ylabel('Number of Scores')
 plt.title('Distribution of Marks')
-plt.show()</code></pre>
-</section>
-
-<section id="sql">
-    <h2>3. MySQL Practical Queries</h2>
-    <p>Assume a table named <code>STUDENT</code> with
-    columns <code>RollNo</code>, <code>Name</code>,
-    <code>Stream</code> and <code>Marks</code>.</p>
-
-    <h3>Basic and Aggregate Queries</h3>
-    <pre><code>SELECT * FROM STUDENT;
+plt.show()</code></pre></div>
+<hr>
+<div id="practical-sql"><h3>Basic and Aggregate SQL Queries</h3>
+<p>Assume a MySQL table named <code>STUDENT</code> with columns <code>RollNo</code>, <code>Name</code>, <code>Stream</code> and <code>Marks</code>.</p>
+<pre><code>SELECT * FROM STUDENT;
 SELECT Name, Marks FROM STUDENT;
 SELECT DISTINCT Stream FROM STUDENT;
 SELECT * FROM STUDENT WHERE Marks > 80;
@@ -238,21 +193,53 @@ SELECT Stream, AVG(Marks) FROM STUDENT GROUP BY Stream HAVING AVG(Marks) > 75;
 SELECT * FROM STUDENT WHERE Name LIKE 'A%';
 SELECT UPPER(Name) FROM STUDENT;
 SELECT ROUND(AVG(Marks), 2) FROM STUDENT;</code></pre>
-
-    <div class="note">
-        These queries assume the table exists and contains
-        the specified columns. Execute them in MySQL after
-        creating and populating the table.
-    </div>
+<div class="note">These SQL queries assume the table exists and contains the specified columns. Run them in MySQL after creating and populating the table.</div></div>
+<p><strong>Practical PDF:</strong> Not uploaded yet.</p>
 </section>
-<p><a href="index.html">← Return to the Home Page</a></p>
-
+<section id="questions" class="resource-section">
+<h2>Important Questions</h2>
+<div id="questions-pandas"><h3>Pandas and DataFrame</h3><ul><li>What is a Pandas Series and how does it differ from a DataFrame?</li><li>Differentiate between <code>loc</code> and <code>iloc</code>.</li><li>What is Boolean indexing?</li><li>Explain the difference between a DataFrame attribute and a method.</li></ul></div>
+<div id="questions-charts"><h3>Data Visualization</h3><ul><li>Differentiate between a line chart and a bar chart.</li><li>What are bins in a histogram?</li><li>What is the purpose of a legend?</li><li>How can a Matplotlib figure be saved?</li></ul></div>
+<div id="questions-sql"><h3>SQL</h3><ul><li>What is the purpose of GROUP BY?</li><li>Differentiate between WHERE and HAVING.</li><li>What is the difference between aggregate and scalar functions?</li><li>Explain ORDER BY with an example.</li></ul></div>
+<div id="questions-networks"><h3>Computer Networks</h3><ul><li>Differentiate between LAN and WAN.</li><li>What is a network topology?</li><li>State the purpose of a router and a switch.</li><li>What is a communication protocol?</li></ul></div>
+<div id="questions-societal"><h3>Societal Impacts</h3><ul><li>What is a digital footprint?</li><li>What is intellectual property?</li><li>Differentiate between copyright and plagiarism.</li><li>State two safe practices for protecting privacy online.</li></ul></div>
+</section>
+<section id="mcqs" class="resource-section">
+<h2>MCQ Practice</h2>
+<div id="mcq-pandas"><h3>Pandas</h3><p><strong>1.</strong> Which attribute returns the number of rows and columns?</p><p>A. <code>df.size</code> &nbsp; B. <code>df.shape</code> &nbsp; C. <code>df.index</code> &nbsp; D. <code>df.dtypes</code></p><details><summary>Show answer</summary><p>Answer: B. <code>df.shape</code></p></details></div>
+<div id="mcq-charts"><h3>Data Visualization</h3><p><strong>2.</strong> Which chart is commonly used to display a frequency distribution?</p><p>A. Histogram &nbsp; B. Line chart &nbsp; C. Flowchart &nbsp; D. Network diagram</p><details><summary>Show answer</summary><p>Answer: A. Histogram</p></details></div>
+<div id="mcq-sql"><h3>SQL</h3><p><strong>3.</strong> Which clause filters grouped results?</p><p>A. WHERE &nbsp; B. ORDER BY &nbsp; C. HAVING &nbsp; D. DISTINCT</p><details><summary>Show answer</summary><p>Answer: C. HAVING</p></details></div>
+<div id="mcq-networks"><h3>Computer Networks</h3><p><strong>4.</strong> Which device forwards packets between networks?</p><p>A. Keyboard &nbsp; B. Router &nbsp; C. Plotter &nbsp; D. Scanner</p><details><summary>Show answer</summary><p>Answer: B. Router</p></details></div>
+<div id="mcq-societal"><h3>Societal Impacts</h3><p><strong>5.</strong> What does a digital footprint represent?</p><p>A. Online activity traces &nbsp; B. A printer setting &nbsp; C. A network cable &nbsp; D. A database key</p><details><summary>Show answer</summary><p>Answer: A. Online activity traces</p></details></div>
+</section>
+<section id="viva" class="resource-section"><h2>Viva and Revision</h2><p>Use these sections to revise concepts and practise oral answers.</p><p><a href="viva.html">Open Viva Questions</a></p><p><a href="index.html">Return to Home</a></p><p><a href="https://cbseacademic.nic.in/" target="_blank" rel="noopener noreferrer">CBSE Academic Website</a></p></section>
 </main>
-
-<footer>
-    <p>CBSE Informatics Practices (065)</p>
-    <p>Educational resource by Syed Rafiq</p>
-</footer>
-
+<footer><p>CBSE Informatics Practices (065) | Prepared by Syed Rafiq</p><p><a href="index.html">Home</a> | <a href="viva.html">Viva Questions</a></p></footer>
+<script>
+(function(){
+const search=document.getElementById('search');
+const filter=document.getElementById('filter');
+const cards=Array.from(document.querySelectorAll('.chapter'));
+const count=document.getElementById('resultCount');
+const noResults=document.getElementById('noResults');
+function update(){
+ const term=search.value.toLowerCase().trim();
+ let visible=0;
+ cards.forEach(function(card){
+  const text=(card.innerText+' '+card.dataset.search).toLowerCase();
+  const matchesText=text.includes(term);
+  const value=filter.value;
+  const matchesType=value==='all'||(value==='notes'&&card.querySelector('a[href^="#notes-"]'))||(value==='questions'&&card.querySelector('a[href^="#questions-"]'))||(value==='mcq'&&card.querySelector('a[href^="#mcq-"]'))||(value==='practical'&&card.querySelector('a[href="#practicals"]'));
+  card.classList.toggle('hidden',!(matchesText&&matchesType));
+  if(matchesText&&matchesType)visible++;
+ });
+ count.textContent=visible+' chapter(s) found';
+ noResults.classList.toggle('hidden',visible!==0);
+}
+search.addEventListener('input',update);
+filter.addEventListener('change',update);
+update();
+})();
+</script>
 </body>
 </html>
